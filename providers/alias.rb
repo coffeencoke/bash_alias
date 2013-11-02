@@ -13,7 +13,6 @@ action :create do
     content = %(alias #{new_resource.name}="#{new_resource.command}")
     destination_file = "~#{new_resource.user}/.bash_aliases"
     bash "Add alias to #{destination_file}" do
-      user new_resource.user
       code %(echo '#{content}' >> #{destination_file})
       not_if %(grep '#{content}' #{destination_file})
     end
