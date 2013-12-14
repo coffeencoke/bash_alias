@@ -1,7 +1,7 @@
-require_recipe "users"
+require_recipe "user"
 
 node.bash_alias.users.each do |username, aliases|
-  users_manage username
+  user_account username
 
   content = <<-eof
 if [ -f ~/.bash_aliases ]; then

@@ -5,4 +5,4 @@ supports 'Ubuntu', '12.04' # this is the only OS that it is tested in
 maintainer_email 'matt.simpson3[at]gmail.com'
 maintainer 'Matt Simpson'
 license 'MIT'
-depends 'users'
+depends 'user'
