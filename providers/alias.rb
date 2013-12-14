@@ -2,11 +2,6 @@ def whyrun_supported?
   true
 end
 
-def initialize(*args)
-  super
-  @action = :create
-end
-
 action :create do
   Chef::Log.info "Creating bash alias '#{new_resource.name}'..."
   if valid_alias?

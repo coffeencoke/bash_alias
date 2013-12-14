@@ -1,4 +1,8 @@
+require_recipe "users"
+
 node.bash_alias.users.each do |username, aliases|
+  users_manage username
+
   content = <<-eof
 if [ -f ~/.bash_aliases ]; then
   source ~/.bash_aliases
