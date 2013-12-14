@@ -12,4 +12,8 @@ describe_recipe 'the aliases' do
       end
     end
   end
+
+  it 'escapes aliases that has double quotes in them' do
+    file("/home/matt/.bash_aliases").must_include 'alias has_double_quotes="\"this will have to be escaped\""'
+  end
 end
