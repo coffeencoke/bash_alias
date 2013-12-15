@@ -23,3 +23,4 @@ suites:
         matt:
           l: ls -lha
           gst: git status
+          has_double_quotes: '"this will have to be escaped"'
