@@ -5,7 +5,7 @@ end
 action :create do
   Chef::Log.info "Creating bash alias '#{new_resource.name}'..."
   if valid_alias?
-    content = %(alias #{new_resource.name}="#{new_resource.command.gsub('"', '\\"')}")
+    content = %(alias #{new_resource.name}="#{new_resource.command.gsub('"', '\\"').gsub("'", '\\"')}")
     destination_file = "~#{new_resource.user}/.bash_aliases"
     bash "Add alias to #{destination_file}" do
       code %(echo '#{content}' >> #{destination_file})
