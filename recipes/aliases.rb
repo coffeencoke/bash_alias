@@ -1,6 +1,6 @@
 require_recipe "user"
 
-node.bash_alias.users.each do |username, aliases|
+node.bash_aliases.users.each do |username, aliases|
   user_account username
 
   content = <<-eof
@@ -18,7 +18,7 @@ fi
   end
 
   aliases.each do |alias_name, command_value|
-    bash_alias_alias alias_name do
+    bash_alias alias_name do
       command command_value
       user username
     end

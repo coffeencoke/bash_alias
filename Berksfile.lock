@@ -1,6 +1,6 @@
 {
   "sources": {
-    "bash_alias": {
+    "bash": {
       "path": "."
     },
     "minitest-handler": {
@@ -9,7 +9,7 @@
     "user": {
       "locked_version": "0.3.0"
     },
-    "bash_alias_test": {
+    "bash-test": {
       "path": "./test"
     },
     "chef_handler": {
